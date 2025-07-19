@@ -299,7 +299,7 @@ if page == "Transformations réalisées":
 
     st.markdown('<p class="small-font"><b>2. Données fournisseur LBE</b></p>', unsafe_allow_html=True) 
 
-    st.markdown('<p class="small-font"><li>Fusion des deux lignes d'entêtes et nettoyage des textes</li></p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font"><li>Fusion des deux lignes d\'entêtes et nettoyage des textes</li></p>', unsafe_allow_html=True)
     with st.expander(""):
 
         st.code("""
