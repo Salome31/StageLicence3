@@ -117,6 +117,8 @@ if page == "Introduction":
     </ul>
     """, unsafe_allow_html=True)
 
+    
+
 # === AFFICHER L'IMAGE REDIMENSIONNEE EN DESSOUS ===================================================================
     st.image(image_resized_bytes, use_container_width=True)
 
@@ -136,7 +138,7 @@ if page == "Introduction":
 
 
 
-# === PAGE 2 : Fichiers bruts ===
+# === PAGE 2 : Fichiers bruts ===============================================
 if page == "Fichiers bruts":
     st.markdown("""
     <ul style='line-height: 1.5;'>
@@ -203,8 +205,9 @@ if page == "Transformations réalisées":
     st.markdown('<p class="medium-font"><b>1- Données fournisseur Volterres :</b></p>', unsafe_allow_html=True)
 
     # ------------------ VOLTERRES ------------------
-
-    with st.expander("Standardisation des noms de colonnes via un dictionnaire"):
+    
+    st.markdown('<p class="small-font"><b>Standardisation des noms de colonnes via un dictionnaire</b></p>', unsafe_allow_html=True)
+    with st.expander(""):
         st.code("""
     dico_colonnes1 = {
         "Numéro de PDL": "Numero_PDL",
