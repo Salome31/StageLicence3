@@ -13,7 +13,7 @@ import plotly.express as px
 #📁 Chemins des fichiers
 base_dir = Path(__file__).parent.resolve()
 df2_path = base_dir / "Fichiers" / "LBE_Anonyme.xlsx"
-df1_path = base_dir / "Fichiers" / "Volterres_Anonyme.xlsx"
+df1_path = base_dir / "Fichiers" / "VOLTERRES_Anonyme.xlsx"
 df_fusionne_path = base_dir / "Fichiers" / "df_fusionne_Anonyme.csv"
 
 logo_path = base_dir / "Images" / "logo-sivom-sage.png"
