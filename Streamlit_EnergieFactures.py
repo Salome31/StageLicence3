@@ -206,7 +206,7 @@ if page == "Transformations réalisées":
 
     # ------------------ VOLTERRES ------------------
     
-    st.markdown('<p class="small-font"><b>Standardisation des noms de colonnes via un dictionnaire</b></p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font"><b><li>Standardisation des noms de colonnes via un dictionnaire</li></b></p>', unsafe_allow_html=True)
     with st.expander(""):
         st.code("""
     dico_colonnes1 = {
