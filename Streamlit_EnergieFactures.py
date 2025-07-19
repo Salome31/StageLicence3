@@ -68,8 +68,10 @@ logo_base64 = image_to_base64(logo_path)
 image = load_image(image_path)
 miage_logo = load_image(miage_path)
 
+# Redimensionnement Logo MIAGE à 50%
+miage_logo_resized = resize_image(miage_logo_bytes, 0.5)
 
-# Redimensionnement avec cache (résultat = image redimensionnée en bytes)
+# Redimensionnement de l'image page 1
 factor = 2
 image_resized_bytes = resize_image(image, factor)  
 
@@ -78,15 +80,15 @@ image_resized_bytes = resize_image(image, factor)
 st.sidebar.title("Salomé Saintin")
 st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
 
-st.sidebar.image(miage_logo, use_container_width=True)
-
-
 st.sidebar.markdown("---")  # ligne de séparation
 
 st.sidebar.title("Sommaire")
 pages = ["Introduction", "Fichiers bruts", "Transformations réalisées", "Fichier Final", "Statistiques et Visualisations"]
 page = st.sidebar.radio("Aller vers", pages)
 
+st.sidebar.markdown("---")  # ligne de séparation
+
+st.sidebar.image(miage_logo, use_container_width=True)
 
 
 # === TITRE & LOGO =================================================================================================
