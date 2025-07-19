@@ -142,7 +142,7 @@ if page == "Introduction":
 if page == "Fichiers bruts":
     st.markdown("""
     <ul style='line-height: 1.5;'>
-        <li><strong>La source</strong> : Deux fichiers Excel des factures originales issues du téléchargement sur les sites extranet des deux prestataires. </li>
+        <li><strong>La source</strong> : Deux fichiers Excel des factures originales issues du téléchargement sur les sites extranet des deux fournisseurs d'électricité. </li>
         <li><strong>La demande</strong> : Créer un flux permettant de charger les factures dans un modèle Power BI. 
             À l'avenir le flux sera automatisé, mais dans le cadre du stage j'ai réalisé un flux en Python pour transformer les fichiers automatiquement à partir des exports Excel mensuels.</li>
      <li><strong>A noter</strong> : Pour des raisons de confidencialité les fichiers ont été anonymisés.</li>
