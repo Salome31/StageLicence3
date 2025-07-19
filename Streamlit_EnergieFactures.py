@@ -78,7 +78,7 @@ image_resized_bytes = resize_image(image, factor)
 # === BARRE LATÉRALE ===============================================================================================
 st.sidebar.title("Salomé Saintin")
 st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
-st.sidebar.markdown("UNIVERSITE TOULOUSE 1 CAPITOLE")
+st.sidebar.markdown("Promotion 2025")
 
 st.sidebar.markdown("---")  # ligne de séparation
 
