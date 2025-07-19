@@ -420,12 +420,18 @@ df_renomme1[[
     st.markdown('<p class="small-font"><li>Format et normalisation</li></p>', unsafe_allow_html=True)
     with st.expander(""):
                 st.code("""
-    df_renomme2["Puissance_souscrite"] = df_renomme2["Puissance_souscrite"].astype(str) + " kVA"
-    df_renomme2["Nom_fournisseur"] = "LBE"
+    # modification des formats 
+df_renomme2["Numero_PDL"] = df_renomme2["Numero_PDL"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme2["Adresse_facture"] = df_renomme2["Adresse_facture"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme2['CP_facture'] = df_renomme2['CP_facture'].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme2['Ville_facture'] = df_renomme2['Ville_facture'].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme2["Numero_facture"] = df_renomme2["Numero_facture"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 
-    colonnes_date = ["Date_facture", "Date_debut_periode", "Date_fin_periode"]
-    for col in colonnes_date:
-        df_renomme2[col] = pd.to_datetime(df_renomme2[col], dayfirst=True, errors="coerce")
+
+# Conversion des dates
+df_renomme2["Date_facture"] = pd.to_datetime(df_renomme2["Date_facture"], dayfirst=True, errors="coerce")
+df_renomme2["Date_debut_periode"] = pd.to_datetime(df_renomme2["Date_debut_periode"], dayfirst=True, errors="coerce")
+df_renomme2["Date_fin_periode"] = pd.to_datetime(df_renomme2["Date_fin_periode"], dayfirst=True, errors="coerce")
                 """, language="python")
 
         # ------------------ FUSION ------------------
