@@ -68,8 +68,6 @@ logo_base64 = image_to_base64(logo_path)
 image = load_image(image_path)
 miage_logo = load_image(miage_path)
 
-# 🎯 Utilisation dans la barre latérale
-st.sidebar.image(miage_logo, use_container_width=True)
 
 # Redimensionnement avec cache (résultat = image redimensionnée en bytes)
 factor = 2
