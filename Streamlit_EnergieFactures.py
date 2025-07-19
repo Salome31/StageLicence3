@@ -81,7 +81,6 @@ st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
 st.sidebar.markdown("Promotion 2025")
 st.sidebar.markdown("---")  # ligne de séparation
 
-
 st.sidebar.title("Sommaire")
 pages = ["Introduction", "Fichiers bruts", "Transformations réalisées", "Fichier Final", "Statistiques et Visualisations"]
 page = st.sidebar.radio("Aller vers", pages)
