@@ -18,7 +18,7 @@ df_fusionne_path = base_dir / "Fichiers" / "df_fusionne_Anonyme.csv"
 
 logo_path = base_dir / "Images" / "logo-sivom-sage.png"
 image_path = base_dir / "Images" / "stageDATA.png"
-miage_path = base_dir / "Images" / "MIAGE.png"
+miage_path = base_dir / "Images" / "Logo_MIAGE.png"
 
 
 
