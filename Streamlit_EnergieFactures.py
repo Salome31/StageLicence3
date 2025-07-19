@@ -79,7 +79,6 @@ image_resized_bytes = resize_image(image, factor)
 st.sidebar.title("Salomé Saintin")
 st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
 st.sidebar.markdown("Promotion 2025")
-
 st.sidebar.markdown("---")  # ligne de séparation
 
 
@@ -89,6 +88,7 @@ page = st.sidebar.radio("Aller vers", pages)
 
 
 
+st.sidebar.markdown("---")  # ligne de séparation
 st.sidebar.image(miage_logo , use_container_width=True)
 
 
