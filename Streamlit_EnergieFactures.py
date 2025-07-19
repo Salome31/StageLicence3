@@ -284,8 +284,8 @@ if page == "Transformations réalisées":
     st.markdown('<p class="small-font"><li>Normalisation des formats</li></p>', unsafe_allow_html=True)
     with st.expander(""):
         st.code("""
-     #modification des formats 
-        #en string
+   
+    #Colonnes texte en string
 df_renomme1["Numero_PDL"] = df_renomme1["Numero_PDL"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 df_renomme1["Adresse_facture"] = df_renomme1["Adresse_facture"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 df_renomme1['CP_facture'] = df_renomme1['CP_facture'].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
@@ -297,7 +297,7 @@ df_renomme1["Nom_fournisseur"] = df_renomme1["Nom_fournisseur"].astype("string")
 df_renomme1["Puissance_souscrite"] = df_renomme1["Puissance_souscrite"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 df_renomme1["Client_final"] = df_renomme1["Client_final"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 
-        #en float
+    #Colonnes numériques en float
 df_renomme1[[
     "Consommation_HPH", "Garantie_origine", "Capacite", "CEE",
     "Consommation_totale", "Consommation_HCB", "Consommation_HPB", "Consommation_HCH"
@@ -307,7 +307,7 @@ df_renomme1[[
 ]].astype(float) 
                 """, language="python")
 
-        # ------------------ LBE ------------------
+# ------------------ LBE ------------------
 
     st.markdown('<p class="small-font"><b>2. Données fournisseur LBE</b></p>', unsafe_allow_html=True) 
 
@@ -420,7 +420,7 @@ df_renomme1[[
     st.markdown('<p class="small-font"><li>Format et normalisation</li></p>', unsafe_allow_html=True)
     with st.expander(""):
                 st.code("""
-    # modification des formats 
+# modification des formats texte en string
 df_renomme2["Numero_PDL"] = df_renomme2["Numero_PDL"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 df_renomme2["Adresse_facture"] = df_renomme2["Adresse_facture"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 df_renomme2['CP_facture'] = df_renomme2['CP_facture'].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
@@ -438,7 +438,8 @@ df_renomme2["Date_fin_periode"] = pd.to_datetime(df_renomme2["Date_fin_periode"]
 
     st.markdown('<p class="small-font"><b>3. Fusion des données des deux fournisseurs</b></p>', unsafe_allow_html=True) 
 
-    with st.expander("Fusion sur les colonnes communes"):
+    st.markdown('<p class="small-font"><li>Fusion sur les colonnes communes</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
         st.markdown('<p class="small-font"><b>Objectif : créer un seul jeu de données uniforme</b></p>', unsafe_allow_html=True)
         st.code("""
     colonnes_communes = [
