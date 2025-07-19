@@ -69,7 +69,7 @@ image = load_image(image_path)
 miage_logo = load_image(miage_path)
 
 # Redimensionnement Logo MIAGE à 50%
-miage_logo_resized = resize_image(miage_logo_bytes, 0.5)
+miage_logo_resized = resize_image(miage_logo, 0.5)
 
 # Redimensionnement de l'image page 1
 factor = 2
