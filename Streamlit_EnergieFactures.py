@@ -73,7 +73,7 @@ miage_logo = load_image(miage_path)
 factor = 2
 image_resized_bytes = resize_image(image, factor)  
 
-miage_logo_resized = resize_image(miage_logo, 0.5)
+
 
 # === BARRE LATÉRALE ===============================================================================================
 st.sidebar.title("Salomé Saintin")
@@ -87,7 +87,7 @@ page = st.sidebar.radio("Aller vers", pages)
 
 st.sidebar.markdown("---")  # ligne de séparation
 
-st.sidebar.image(miage_logo_resized , use_container_width=True)
+st.sidebar.image(miage_logo , use_container_width=True)
 
 
 # === TITRE & LOGO =================================================================================================
