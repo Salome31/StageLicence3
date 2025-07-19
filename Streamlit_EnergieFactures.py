@@ -108,7 +108,7 @@ if page == "Introduction":
     """, unsafe_allow_html=True)
 
 # === AFFICHER L'IMAGE REDIMENSIONNEE EN DESSOUS ===================================================================
-    st.image(image_resized_bytes, use_column_width=True)
+    st.image(image_resized_bytes, use_container_width=True)
 
 
     st.markdown("""
