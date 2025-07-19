@@ -260,8 +260,8 @@ if page == "Transformations réalisées":
     df_renomme1.replace(['nan', 'NaN', 'None'], np.nan, inplace=True)
                 """, language="python")
         
-    
-    with st.expander("Création de colonnes calculées et colonnes imposées"):
+    st.markdown('<p class="small-font"><li>Création de colonnes calculées et colonnes imposées</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
             
         st.code("""
     df_renomme1["Total_HTVA"] = (
@@ -280,7 +280,9 @@ if page == "Transformations réalisées":
     df_renomme1["Client_final"] = "SPL LES EAUX DU SAGE"
                 """, language="python")
 
-    with st.expander("Normalisation des formats"):
+    
+    st.markdown('<p class="small-font"><li>Normalisation des formats</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
         st.code("""
     colonnes_string = ["Numero_PDL", "Adresse_facture", "CP_facture", "Ville_facture",
                     "Numero_facture", "Numero_contrat", "Formule_tarifaire_acheminement",
@@ -297,7 +299,8 @@ if page == "Transformations réalisées":
 
     st.markdown('<p class="small-font"><b>2. Données fournisseur LBE</b></p>', unsafe_allow_html=True) 
 
-    with st.expander("Fusion des deux lignes d'entêtes et nettoyage des textes"):
+    st.markdown('<p class="small-font"><li>Fusion des deux lignes d'entêtes et nettoyage des textes</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
 
         st.code("""
     df2 = pd.read_excel(df2_path, header=[0, 1])
@@ -312,8 +315,9 @@ if page == "Transformations réalisées":
 
     df2.columns = [clean_col(col) for col in df2.columns]
                 """, language="python")
-
-    with st.expander("Standardisation des noms de colonnes"):
+                
+    st.markdown('<p class="small-font"><li>Standardisation des noms de colonnes</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
         st.code("""dico_colonnes2 = {
     "PointdelivraisonPDL": "Numero_PDL",
     "FacturationFactureN°": "Numero_facture",
@@ -371,14 +375,15 @@ if page == "Transformations réalisées":
     'PointdelivraisonCommunelieudeconsommation':'Ville_facture'} )
 
              """, language="python")
-        
-    with st.expander("Renommage des colonnes"):
+             
+    st.markdown('<p class="small-font"><li>Renommage des colonnes</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
         st.code("""
     df_renomme2 = df2.rename(columns=dico_colonnes2)[[col for col in dico_colonnes2.values() if col in df2.rename(columns=dico_colonnes2).columns]].copy()
                 """, language="python")
 
-        
-    with st.expander("Création de nouvelles colonnes"):
+    st.markdown('<p class="small-font"><li>Création de nouvelles colonnes</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
         st.code("""
     df_renomme2["Total_TVA"] = df_renomme2["TVA_5.5"] + df_renomme2["TVA_20"]
     df_renomme2["Tarif_taxes_contributions_locales"] = df_renomme2["CSPE"] + df_renomme2["CTA"]
@@ -400,8 +405,8 @@ if page == "Transformations réalisées":
     ).dt.days
                 """, language="python")
 
-    
-    with st.expander("Format et normalisation"):
+    st.markdown('<p class="small-font"><li>Format et normalisation</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
                 st.code("""
     df_renomme2["Puissance_souscrite"] = df_renomme2["Puissance_souscrite"].astype(str) + " kVA"
     df_renomme2["Nom_fournisseur"] = "LBE"
