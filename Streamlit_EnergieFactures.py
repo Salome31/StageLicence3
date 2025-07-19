@@ -89,6 +89,9 @@ st.sidebar.markdown("---")  # ligne de séparation
 
 st.sidebar.image(miage_logo , use_container_width=True)
 
+miage_logo_resized = resize_image(miage_logo, 0.5)  # réduit à 50%
+st.sidebar.image(miage_logo_resized)
+
 
 # === TITRE & LOGO =================================================================================================
 st.markdown(f"""
