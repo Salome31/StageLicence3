@@ -298,8 +298,13 @@ df_renomme1["Puissance_souscrite"] = df_renomme1["Puissance_souscrite"].astype("
 df_renomme1["Client_final"] = df_renomme1["Client_final"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 
         #en float
-df_renomme1[["Consommation_HPH","Garantie_origine","Capacite","CEE","Consommation_totale","Consommation_HCB","Consommation_HPB","Consommation_HCH"]] 
-= df_renomme1[["Consommation_HPH","Garantie_origine","Capacite","CEE","Consommation_totale","Consommation_HCB","Consommation_HPB","Consommation_HCH"]].astype(float)   
+df_renomme1[[
+    "Consommation_HPH", "Garantie_origine", "Capacite", "CEE",
+    "Consommation_totale", "Consommation_HCB", "Consommation_HPB", "Consommation_HCH"
+]] = df_renomme1[[
+    "Consommation_HPH", "Garantie_origine", "Capacite", "CEE",
+    "Consommation_totale", "Consommation_HCB", "Consommation_HPB", "Consommation_HCH"
+]].astype(float) 
                 """, language="python")
 
         # ------------------ LBE ------------------
