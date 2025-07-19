@@ -18,6 +18,8 @@ df_fusionne_path = base_dir / "Fichiers" / "df_fusionne_Anonyme.csv"
 
 logo_path = base_dir / "Images" / "logo-sivom-sage.png"
 image_path = base_dir / "Images" / "stageDATA.png"
+miage_path = base_dir / "Images" / "MIAGE.png"
+
 
 
 # ✅ Mise en cache des fichiers Excel et csv
@@ -61,9 +63,13 @@ def resize_image(image_bytes, factor):
     return buffered.getvalue()  # image en bytes
 
 
-# Chargement du logo et de l’image
+# Chargement logos et images
 logo_base64 = image_to_base64(logo_path)
 image = load_image(image_path)
+miage_logo = load_image(miage_path)
+
+# 🎯 Utilisation dans la barre latérale
+st.sidebar.image(miage_logo, use_container_width=True)
 
 # Redimensionnement avec cache (résultat = image redimensionnée en bytes)
 factor = 2
@@ -73,6 +79,9 @@ image_resized_bytes = resize_image(image, factor)
 # === BARRE LATÉRALE ===============================================================================================
 st.sidebar.title("Salomé Saintin")
 st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
+
+st.sidebar.image(miage_logo, use_container_width=True)
+
 
 st.sidebar.markdown("---")  # ligne de séparation
 
