@@ -284,15 +284,22 @@ if page == "Transformations réalisées":
     st.markdown('<p class="small-font"><li>Normalisation des formats</li></p>', unsafe_allow_html=True)
     with st.expander(""):
         st.code("""
-    colonnes_string = ["Numero_PDL", "Adresse_facture", "CP_facture", "Ville_facture",
-                    "Numero_facture", "Numero_contrat", "Formule_tarifaire_acheminement",
-                    "Nom_fournisseur", "Puissance_souscrite", "Client_final"]
-    for col in colonnes_string:
-        df_renomme1[col] = df_renomme1[col].astype("string").str.strip().str.replace(r"\\.0$", "", regex=True)
+     #modification des formats 
+        #en string
+df_renomme1["Numero_PDL"] = df_renomme1["Numero_PDL"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1["Adresse_facture"] = df_renomme1["Adresse_facture"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1['CP_facture'] = df_renomme1['CP_facture'].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1['Ville_facture'] = df_renomme1['Ville_facture'].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1["Numero_facture"] = df_renomme1["Numero_facture"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1["Numero_contrat"] = df_renomme1["Numero_contrat"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1["Formule_tarifaire_acheminement"] = df_renomme1["Formule_tarifaire_acheminement"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1["Nom_fournisseur"] = df_renomme1["Nom_fournisseur"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1["Puissance_souscrite"] = df_renomme1["Puissance_souscrite"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
+df_renomme1["Client_final"] = df_renomme1["Client_final"].astype("string").str.strip().str.replace(r"\.0$", "", regex=True)
 
-    colonnes_float = ["Consommation_HPH", "Garantie_origine", "Capacite", "CEE",
-                    "Consommation_totale", "Consommation_HCB", "Consommation_HPB", "Consommation_HCH"]
-    df_renomme1[colonnes_float] = df_renomme1[colonnes_float].astype(float)
+        #en float
+df_renomme1[["Consommation_HPH","Garantie_origine","Capacite","CEE","Consommation_totale","Consommation_HCB","Consommation_HPB","Consommation_HCH"]] 
+= df_renomme1[["Consommation_HPH","Garantie_origine","Capacite","CEE","Consommation_totale","Consommation_HCB","Consommation_HPB","Consommation_HCH"]].astype(float)   
                 """, language="python")
 
         # ------------------ LBE ------------------
