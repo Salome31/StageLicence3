@@ -184,6 +184,7 @@ if page == "Fichiers bruts":
         st.write("🔁 Il est nécessaire de normaliser la saisie des données pour pouvoir les analyser efficacement.")
 
 
+
 # === PAGE 3 : Transformations réalisées ===========================================================================================
 if page == "Transformations réalisées":
     st.markdown("""
@@ -249,8 +250,9 @@ if page == "Transformations réalisées":
         df_renomme1 = df1.rename(columns=dico_colonnes1)[[col for col in dico_colonnes1.values() if col in df1.rename(columns=dico_colonnes1).columns]].copy()
                 """, language="python")
 
-        
-    with st.expander("Nettoyage des lignes vides"):
+    
+    st.markdown('<p class="small-font"><li>Nettoyage des lignes vides</li></p>', unsafe_allow_html=True)
+    with st.expander(""):
             
         st.code("""
     df_renomme1 = df_renomme1.dropna(how='all')
