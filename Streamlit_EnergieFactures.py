@@ -525,7 +525,7 @@ if page == "Fichier Final":
 
 
 # === PAGE 5 : Statistiques =======================================================================================
-if page == "Statistiques":
+if page == "Statistiques et visualisations":
 
     df_fusionne = load_df_fusionne(df_fusionne_path)
 
