@@ -702,7 +702,7 @@ if page == "Conclusion":
 
     st.markdown("""
     <h4><strong>Perspectives</strong></h4>
-    <p>Le travail préliminaire réalisé au cours de mon stage permettra, à terme, à l'entreprise de mieux maîtriser ses dépenses d'électricité et de maîtriser ses contrats 
+    <p>Le travail préliminaire réalisé au cours de mon stage permettra, à terme, à l'entreprise de mieux maîtriser ses dépenses d'électricité et d'optimiser ses contrats 
     en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat souscrit.</p> 
     
     <p>Cela m'a permis de travailler sur des données liées à l'énergie et d'utiliser différents outils de code et de visualisation (notebook Jupyter, VS CODE, POWER BI). 
