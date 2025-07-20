@@ -695,5 +695,7 @@ if page == "Conclusion":
     <p>Nous l'avons utilisé au cours du stage afin d'intégrer les nouvelles factures au modèle Power BI.</p>
     <p>Le fichier des factures fusionné a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
     <p>Le travail réalisé au cours de mon stage (script Pyhton et rapport Power BI) sera complété et enrichi par l'entreprise et les flux seront automatisés.</p> 
+    <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),</p> 
+    <p>et d'autres éléments devront être ajoutés au modèles, par exemple pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
 
     """, unsafe_allow_html=True)
