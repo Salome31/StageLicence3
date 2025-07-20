@@ -75,14 +75,14 @@ image_resized_bytes = resize_image(image, factor)
 
 
 
-# === BARRE LATÉRALE ===============================================================================================
+# === BARRE LATÉRALE ET PAGES  =========================================================================================
 st.sidebar.title("Salomé Saintin")
 st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
 st.sidebar.markdown("Promotion 2025")
 st.sidebar.markdown("---")  # ligne de séparation
 
 st.sidebar.title("Sommaire")
-pages = ["Introduction", "Fichiers bruts", "Transformations réalisées", "Fichier Final", "Statistiques et Visualisations"]
+pages = ["Introduction", "Fichiers bruts", "Transformations réalisées", "Fichier Final", "Statistiques", "Conclusion"]
 page = st.sidebar.radio("Aller vers", pages)
 
 
@@ -99,6 +99,7 @@ st.markdown(f"""
         <h1 style="margin: 0;">STAGE - SPL Les Eaux du SAGe</h1>
     </div>
     """, unsafe_allow_html=True)
+
 
 # === SOUS-TITRE =====================================================================================================
 st.write("***&nbsp;&nbsp; Flux de transformation des factures d'énergie pour créer un tableau de bord de gestion des contrats***")
@@ -524,7 +525,7 @@ if page == "Fichier Final":
 
 
 # === PAGE 5 : Statistiques =======================================================================================
-if page == "Statistiques et Visualisations":
+if page == "Statistiques":
 
     df_fusionne = load_df_fusionne(df_fusionne_path)
 
@@ -683,3 +684,14 @@ if page == "Statistiques et Visualisations":
     df_description = df_fusionne.describe().transpose().reset_index()
     df_description.rename(columns={"index": "Colonne"}, inplace=True)
     st.dataframe(df_description, use_container_width=True)
+
+
+# === PAGE 6 : Conclusion =======================================================================================
+if page == "Conclusion":
+
+        st.markdown("""
+    <ul style='line-height: 1.5;'>
+        <strong>Conclusions et perspectives</strong> 
+        <li><strong>La source</strong> : Transformer et fusionner les factures des deux fournisseurs : Volterres et Lbe</li>
+    </ul>
+    """, unsafe_allow_html=True)
