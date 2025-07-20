@@ -688,10 +688,11 @@ if page == "Statistiques":
 
 # === PAGE 6 : Conclusion =======================================================================================
 if page == "Conclusion":
-
-        st.markdown("""
+    
+    st.markdown("""
+    <h4><strong>Conclusions et perspectives</strong></h4>
+    <p>Le script réalisé nous a permis de :</p>
     <ul style='line-height: 1.5;'>
-        <strong>Conclusions et perspectives</strong> 
         <li><strong>La source</strong> : Transformer et fusionner les factures des deux fournisseurs : Volterres et Lbe</li>
     </ul>
     """, unsafe_allow_html=True)
