@@ -713,7 +713,7 @@ if page == "Conclusion":
     <p>Le travail réalisé au cours de mon stage (script Pyhton et rapport Power BI) sera complété et enrichi par l'entreprise et les flux seront automatisés.</p> 
     
     <p>Ce travail préliminaire permettra à terme à l'entreprise de mieux maîtriser ses dépenses d'électricité et d'optimiser ses contrats 
-    en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat souscrit.</p> 
+    en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat.</p> 
     
     <p>Cela m'a permis de travailler sur des données liées à l'énergie et d'utiliser différents outils de code et de visualisation (notebook Jupyter, VS CODE, POWER BI). 
     J'ai également pu m'imprégner du fonctionnement de l'entreprise et mieux comprendre les attentes des métiers vis à vis de la DSI et de l'équipe Data.</p> 
