@@ -702,7 +702,7 @@ if page == "Conclusion":
     <h4><strong>Conclusions</strong></h4>
     <p>Le script réalisé avec python en début de stage a permis bien comprendre le contexte du marché d'électricité et la structure des factures des deux fournisseurs.</p> 
     <p>Il a été utilisé plusieurs fois au cours du stage afin d'intégrer les nouvelles factures au modèle Power BI.</p>
-    <p>Le fichier des factures fusionné a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
+    <p>Le fichier transformé a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
     <p>Le rapport Power BI réalisé a été présenté au Directeur Général des Services ainsi qu'à la responsable des marchés publics.</p> 
 
     """, unsafe_allow_html=True)
@@ -712,11 +712,11 @@ if page == "Conclusion":
 
     <p>Le travail réalisé au cours de mon stage (script Pyhton et rapport Power BI) sera complété et enrichi par l'entreprise et les flux seront automatisés.</p> 
     
-    <p>Le travail préliminaire réalisé permettra, à terme, à l'entreprise de mieux maîtriser ses dépenses d'électricité et d'optimiser ses contrats 
+    <p>Ce travail préliminaire permettra à terme à l'entreprise de mieux maîtriser ses dépenses d'électricité et d'optimiser ses contrats 
     en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat souscrit.</p> 
     
     <p>Cela m'a permis de travailler sur des données liées à l'énergie et d'utiliser différents outils de code et de visualisation (notebook Jupyter, VS CODE, POWER BI). 
-    J'ai également pu m'm'imprégner du fonctionnement des entreprises et des attentes des métiers vis à vis de la DSI et de l'équipe Data.</p> 
+    J'ai également pu m'imprégner du fonctionnement de l'entreprises et mieux comprendre les attentes des métiers vis à vis de la DSI et de l'équipe Data.</p> 
 
 
     """, unsafe_allow_html=True)
