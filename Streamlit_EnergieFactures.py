@@ -717,7 +717,7 @@ if page == "Conclusion":
     <p>Ce travail préliminaire permettra à terme à l'entreprise de mieux maîtriser ses dépenses d'électricité et d'optimiser ses contrats 
     en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat.</p> 
     
-    <p>Cela m'a permis de travailler sur des données liées à l'énergie et d'utiliser différents outils (notebook Jupyter, VS CODE, EXCEL, POWER BI). 
+    <p>Cela m'a permis de travailler sur des données liées à l'énergie et d'utiliser différents outils (notebook Jupyter, VS Code, Excel, Power BI). 
     J'ai également pu m'imprégner du fonctionnement de l'entreprise et mieux comprendre les attentes des métiers vis à vis de la DSI et de l'équipe Data.</p> 
 
 
