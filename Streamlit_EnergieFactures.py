@@ -699,3 +699,14 @@ if page == "Conclusion":
     et d'autres éléments devront être ajoutés au modèles, par exemple pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
 
     """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <h4><strong>Conclusions et perspectives</strong></h4>
+    <p>Le travail préliminaire réalisé au cours de mon stage permettra, à terme, à l'entreprise de mieux maîtriser ses dépenses d'électricité et de maîtriser ses contrats 
+    en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat souscrit.</p> 
+    
+    <p>Cela m'a permis de travailler sur des données liées à l'énergie et d'utiliser différents outils de code et de visualisation (notebook Jupyter, VS CODE, POWER BI). 
+    J'ai également pu m'm'imprégner du fonctionnement des entreprises et des besoins des métiers.</p> 
+
+
+    """, unsafe_allow_html=True)
