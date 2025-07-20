@@ -75,14 +75,14 @@ image_resized_bytes = resize_image(image, factor)
 
 
 
-# === BARRE LATÉRALE ET PAGES  =========================================================================================
+# === BARRE LATÉRALE ET LISTE DES PAGES  =========================================================================================
 st.sidebar.title("Salomé Saintin")
 st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
 st.sidebar.markdown("Promotion 2025")
 st.sidebar.markdown("---")  # ligne de séparation
 
 st.sidebar.title("Sommaire")
-pages = ["Introduction", "Fichiers bruts", "Transformations réalisées", "Fichier Final", "Statistiques", "Conclusion"]
+pages = ["Introduction", "Fichiers bruts", "Transformations réalisées", "Fichier Final", "Statistiques et visualisations", "Conclusion"]
 page = st.sidebar.radio("Aller vers", pages)
 
 
@@ -120,7 +120,7 @@ if page == "Introduction":
 
     
 
-# === AFFICHER L'IMAGE REDIMENSIONNEE EN DESSOUS ===================================================================
+# === AFFICHER L'IMAGE EN DESSOUS ===================================================================
     st.image(image_resized_bytes, use_container_width=True)
 
 
@@ -678,7 +678,7 @@ if page == "Statistiques":
 
     st.plotly_chart(fig_htva, use_container_width=True)
 
-    st.subheader("Statistiques")
+    st.subheader("Statistiques et visualisations")
     # 📊 Statistiques descriptives globales
     st.markdown("**📊 Statistiques descriptives (colonnes numériques) :**")
     df_description = df_fusionne.describe().transpose().reset_index()
