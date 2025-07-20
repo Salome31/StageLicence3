@@ -495,12 +495,12 @@ if page == "Fichier Final":
             })
             st.dataframe(colonnes_types, use_container_width=True)
 
-    st.markdown("""
-    <p>Nous avons selectionné 34 colonnes qui nous ont semblé utiles à l'analyse des factures d'électricité.</p> 
-    <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
-    et d'autres devront être ajoutés au modèle pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
-
-    """, unsafe_allow_html=True)
+        st.markdown("""
+        <p>Nous avons selectionné 34 colonnes qui nous ont semblé utiles à l'analyse des factures d'électricité.</p> 
+        <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
+        et d'autres devront être ajoutés au modèle pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
+    
+        """, unsafe_allow_html=True)
 
 
         
