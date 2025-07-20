@@ -495,6 +495,16 @@ if page == "Fichier Final":
             })
             st.dataframe(colonnes_types, use_container_width=True)
 
+    st.markdown("""
+    <p>Nous avons selectionné 34 colonnes qui nous ont semblé utiles à l'analyse des factures d'électricité.</p> 
+    <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
+    et d'autres devront être ajoutés au modèle pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
+
+    """, unsafe_allow_html=True)
+
+
+            <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
+    et d'autres devront être ajoutés au modèle pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
 
         # 🗓️ Dates de facturation par fournisseur
         st.markdown("**🗓️ Périodes de facturation par fournisseur :**")
@@ -702,8 +712,7 @@ if page == "Conclusion":
     <h4><strong>Perspectives</strong></h4>
 
     <p>Le travail réalisé au cours de mon stage (script Pyhton et rapport Power BI) sera complété et enrichi par l'entreprise et les flux seront automatisés.</p> 
-    <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
-    et d'autres devront être ajoutés au modèle pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
+    
     <p>Le travail préliminaire réalisé au cours de mon stage permettra, à terme, à l'entreprise de mieux maîtriser ses dépenses d'électricité et d'optimiser ses contrats 
     en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat souscrit.</p> 
     
