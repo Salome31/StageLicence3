@@ -694,6 +694,7 @@ if page == "Conclusion":
     <p>Le script réalisé avec python en début de stage a permis bien comprendre le contexte du marché d'électricité et la structure des factures des deux fournisseurs.</p> 
     <p>Nous l'avons utilisé au cours du stage afin d'intégrer les nouvelles factures au modèle Power BI.</p>
     <p>Le fichier des factures fusionné a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
+    <p>Le rapport Power BI réalisé a été présenté au Directeur Général des Services ainsi qu'à la responsable des marchés publics.</p> 
 
     """, unsafe_allow_html=True)
 
@@ -702,7 +703,7 @@ if page == "Conclusion":
 
     <p>Le travail réalisé au cours de mon stage (script Pyhton et rapport Power BI) sera complété et enrichi par l'entreprise et les flux seront automatisés.</p> 
     <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
-    et d'autres éléments devront être ajoutés au modèles, par exemple pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
+    et d'autres devront être ajoutés au modèle pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
     <p>Le travail préliminaire réalisé au cours de mon stage permettra, à terme, à l'entreprise de mieux maîtriser ses dépenses d'électricité et d'optimiser ses contrats 
     en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat souscrit.</p> 
     
