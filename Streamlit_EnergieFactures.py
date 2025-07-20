@@ -696,7 +696,4 @@ if page == "Conclusion":
     <p>Le fichier des factures fusionné a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
     <p>Le travail réalisé au cours de mon stage (script Pyhton et rapport Power BI) sera complété et enrichi par l'entreprise et les flux seront automatisés.</p> 
 
-    <ul style='line-height: 1.5;'>
-        <li><strong>La source</strong> : Transformer et fusionner les factures des deux fournisseurs : Volterres et Lbe</li>
-    </ul>
     """, unsafe_allow_html=True)
