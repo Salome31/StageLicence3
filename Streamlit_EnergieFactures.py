@@ -594,6 +594,8 @@ if page == "Statistiques et visualisations":
         )
         st.plotly_chart(fig_pie_factures, use_container_width=True)
 
+
+    
     #Affichage du camembert colonne 2
     with col2:
         fig_pie_conso = px.pie(
@@ -687,7 +689,7 @@ if page == "Statistiques et visualisations":
 
     st.plotly_chart(fig_htva, use_container_width=True)
 
-    st.subheader("Statistiques et visualisations")
+    st.subheader("Statistiques")
     # 📊 Statistiques descriptives globales
     st.markdown("**📊 Statistiques descriptives (colonnes numériques) :**")
     df_description = df_fusionne.describe().transpose().reset_index()
