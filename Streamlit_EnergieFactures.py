@@ -503,8 +503,7 @@ if page == "Fichier Final":
     """, unsafe_allow_html=True)
 
 
-            <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
-    et d'autres devront être ajoutés au modèle pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
+        
 
         # 🗓️ Dates de facturation par fournisseur
         st.markdown("**🗓️ Périodes de facturation par fournisseur :**")
