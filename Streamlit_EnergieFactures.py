@@ -1,4 +1,4 @@
-import streamlit as st
+dimport streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
 import base64
@@ -691,7 +691,10 @@ if page == "Conclusion":
     
     st.markdown("""
     <h4><strong>Conclusions et perspectives</strong></h4>
-    <p>Le script réalisé nous a permis de :</p>
+    <p>Le script réalisé avec python en début de stage a permis bien comprendre le contexte du marché d'électricité et la structure des factures des deux fournisseurs.</p> 
+    <p>Nous l'avons utilisé au cours du stage afin d'intégrer les nouvelles factures de mai et juin au modèle Power BI.</p>
+    <p>Le fichier des factures fusionné a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
+
     <ul style='line-height: 1.5;'>
         <li><strong>La source</strong> : Transformer et fusionner les factures des deux fournisseurs : Volterres et Lbe</li>
     </ul>
