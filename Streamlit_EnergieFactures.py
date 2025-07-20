@@ -690,7 +690,7 @@ if page == "Statistiques et visualisations":
 if page == "Conclusion":
     
     st.markdown("""
-    <h4><strong>Conclusions et perspectives</strong></h4>
+    <h4><strong>Conclusions</strong></h4>
     <p>Le script réalisé avec python en début de stage a permis bien comprendre le contexte du marché d'électricité et la structure des factures des deux fournisseurs.</p> 
     <p>Nous l'avons utilisé au cours du stage afin d'intégrer les nouvelles factures au modèle Power BI.</p>
     <p>Le fichier des factures fusionné a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
@@ -701,6 +701,7 @@ if page == "Conclusion":
     """, unsafe_allow_html=True)
 
     st.markdown("""
+    <h4><strong>Perspectives</strong></h4>
     <p>Le travail préliminaire réalisé au cours de mon stage permettra, à terme, à l'entreprise de mieux maîtriser ses dépenses d'électricité et de maîtriser ses contrats 
     en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat souscrit.</p> 
     
