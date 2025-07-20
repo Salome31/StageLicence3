@@ -703,7 +703,7 @@ if page == "Conclusion":
     <p>Le script réalisé avec python en début de stage a permis bien comprendre le contexte du marché d'électricité et la structure des factures des deux fournisseurs.</p> 
     <p>Il a été utilisé plusieurs fois au cours du stage afin d'intégrer les nouvelles factures au modèle Power BI.</p>
     <p>Le fichier transformé a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
-    <p>J'ai eu l'occasion de présenter le rapport Power BI réalisé au Directeur Général des Services ainsi qu'à la responsable des marchés publics au cours d'une réunion.</p> 
+    <p>J'ai eu l'occasion de présenter le rapport Power BI réalisé au Directeur Général des Services ainsi qu'à la responsable des marchés publics au cours d'une réunion organisée à la fin de mon stage.</p> 
 
     """, unsafe_allow_html=True)
 
