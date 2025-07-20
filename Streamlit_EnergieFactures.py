@@ -705,7 +705,7 @@ if page == "Conclusion":
     en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat souscrit.</p> 
     
     <p>Cela m'a permis de travailler sur des données liées à l'énergie et d'utiliser différents outils de code et de visualisation (notebook Jupyter, VS CODE, POWER BI). 
-    J'ai également pu m'm'imprégner du fonctionnement des entreprises et des besoins des métiers.</p> 
+    J'ai également pu m'm'imprégner du fonctionnement des entreprises et des attentes des métiers vis à vis de la DSI et de l'équipe Data.</p> 
 
 
     """, unsafe_allow_html=True)
