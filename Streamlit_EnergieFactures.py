@@ -692,7 +692,7 @@ if page == "Statistiques et visualisations":
     st.subheader("Statistiques")
     # 📊 Statistiques descriptives globales
     st.markdown("**📊 Statistiques descriptives (colonnes numériques) :**")
-    df_description = df_fusionne.describe().transpose().reset_index()
+    df_description = df_fusionne[["Tarif_acheminement"]].describe().transpose().reset_index()
     df_description.rename(columns={"index": "Colonne"}, inplace=True)
     st.dataframe(df_description, use_container_width=True)
 
