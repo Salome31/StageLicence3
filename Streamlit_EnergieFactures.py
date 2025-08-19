@@ -78,7 +78,7 @@ image_resized_bytes = resize_image(image, factor)
 # === BARRE LATÉRALE ET LISTE DES PAGES  =========================================================================================
 st.sidebar.title("Salomé Saintin")
 st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
-st.sidebar.markdown("Promotion 2025")
+st.sidebar.markdown("12/05/2025-01/09/2025")
 st.sidebar.markdown("---")  # ligne de séparation
 
 st.sidebar.title("Sommaire")
@@ -722,3 +722,4 @@ if page == "Conclusion":
 
 
     """, unsafe_allow_html=True)
+
