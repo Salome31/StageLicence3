@@ -110,6 +110,26 @@ st.write("***&nbsp;&nbsp; Flux de transformation des factures d'énergie pour cr
 
 
 # === PAGE 1 : Introduction ===========================================================================================
+if page == "Fichiers bruts":
+    st.markdown("""
+    <ul style='line-height: 1.5;'>
+        <li><strong>Problématique</strong> :
+            Les factures des consommations électriques n’avaient pas la même structure selon leur fournisseur (La Belle Énergie ou Volterres) :
+            <ul>
+                <li>Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres</li>
+                <li>Noms de colonnes différents</li>
+                <li>Formats et types de données hétérogènes</li>
+            </ul>
+            Cette hétérogénéité des données empêchait leur combinaison et leur analyse correcte dans Power BI,
+            qui requiert des structures uniformes.
+        </li>
+
+        <li><strong>La source</strong> : 
+            Transformer et fusionner les factures des deux fournisseurs : Volterres et LBE
+        </li>
+    </ul>
+    """, unsafe_allow_html=True)
+
 if page == "Introduction":
 st.markdown("""
 <ul style='line-height: 1.5;'>
@@ -731,6 +751,7 @@ if page == "Conclusion":
 
 
     """, unsafe_allow_html=True)
+
 
 
 
