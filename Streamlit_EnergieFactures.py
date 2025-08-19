@@ -110,7 +110,6 @@ st.write("***&nbsp;&nbsp; Création de la table de fait FACTURE***")
 
 
 # === PAGE 1 : Introduction ===========================================================================================
-# === PAGE 1 : Introduction ===========================================================================================
 if page == "Introduction":
     st.markdown("""
     <p style='line-height: 1.5;'>
@@ -126,27 +125,34 @@ if page == "Introduction":
         En raison de divergences de structure, il était impossible de fusionner les données des différents fournisseurs dans une table commune. 
         Cette absence d’uniformité empêchait toute analyse fiable dans Power BI, qui nécessite des structures homogènes pour exploiter les données.
     </p>
-    """, unsafe_allow_html=True)
+    """ , unsafe_allow_html=True)
 
-
-    
 
 # === AFFICHER L'IMAGE EN DESSOUS ===================================================================
     st.image(image_resized_bytes, use_container_width=True)
 
 
+# === ACTIONS MISES EN PLACE ===========================================================================================
     st.markdown("""
     <ul style='line-height: 1.5;'>
-        <li><strong>Actions mises en place : </strong>
-            <ul style='line-height: 1.5;'> Pour rendre ces données exploitables, deux étapes ont été nécessaires 
-                <li> Une analyse fonctionnelle des factures et des marchés de l’énergie</li>
-                <li> Un travail d’uniformisation technique via un script Python</li>
+        <li><strong>Analyse fonctionnelle des factures et du marché de l’énergie :</strong>
+            <p>Pour répondre aux besoins métiers, j’ai étudié le marché de l’énergie et comparé les structures des factures des deux fournisseurs afin d’identifier les champs utiles et leurs correspondances. Ce travail de compréhension technique, qui m’a pris le plus de temps, était essentiel.</p>
+            <p>Trois blocs d’information ont été retenus :</p>
+            <ul>
+                <li>Puissance souscrite</li>
+                <li>Consommation</li>
+                <li>Montants facturés :
+                    <ul>
+                        <li>Fourniture</li>
+                        <li>Acheminement</li>
+                        <li>Taxes</li>
+                    </ul>
+                </li>
             </ul>
+            <p>J’ai ensuite pris contact avec le métier et le prestataire Unixial pour valider les colonnes, vérifier certains calculs, clarifier les éléments ambigus et obtenir les prévisions de consommation 2025 ainsi que les recommandations nécessaires.</p>
         </li>
     </ul>
     """, unsafe_allow_html=True)
-
-
 
 # === PAGE 2 : Fichiers bruts ===============================================
 if page == "Fichiers bruts":
@@ -731,6 +737,7 @@ if page == "Conclusion":
 
 
     """, unsafe_allow_html=True)
+
 
 
 
