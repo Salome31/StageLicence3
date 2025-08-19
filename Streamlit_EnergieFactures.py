@@ -96,13 +96,13 @@ st.sidebar.image(miage_logo , use_container_width=True)
 st.markdown(f"""
     <div style="display: flex; align-items: center;">
         <img src="data:image/png;base64,{logo_base64}" style="height:80px; margin-right: 40px;">
-        <h1 style="margin: 0;">STAGE - SPL Les Eaux du SAGe</h1>
+        <h1 style="margin: 0;">Appropriation du projet data</h1>
     </div>
     """, unsafe_allow_html=True)
 
 
 # === SOUS-TITRE =====================================================================================================
-st.write("***&nbsp;&nbsp; Flux de transformation des factures d'énergie pour créer un tableau de bord de gestion des contrats***")
+st.write("***&nbsp;&nbsp; Création de la table de fait FACTURE***")
 
 
 
@@ -112,10 +112,15 @@ st.write("***&nbsp;&nbsp; Flux de transformation des factures d'énergie pour cr
 # === PAGE 1 : Introduction ===========================================================================================
 if page == "Introduction":
     st.markdown("""
-    <ul style='line-height: 1.5;'>
-        <li><strong>Objectif</strong> : Créer un pipeline Python pour mettre à jour le tableau de bord avec les nouvelles factures</li>
-        <li><strong>La source</strong> : Transformer et fusionner les factures des deux fournisseurs : Volterres et Lbe</li>
-    </ul>
+    <p style='line-height: 1.5;'>
+        <strong>Problématique :</strong><br>
+        Les factures des consommations électriques n’avaient pas la même structure selon leur fournisseur (La Belle Énergie ou Volterres) :<br>
+        - Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres<br>
+        - Noms de colonnes différents<br>
+        - Formats et types de données hétérogènes<br><br>
+        Cette hétérogénéité des données empêchait leur combinaison et leur analyse correcte dans Power BI, 
+        qui requiert des structures uniformes.
+    </p>
     """, unsafe_allow_html=True)
 
     
@@ -722,3 +727,4 @@ if page == "Conclusion":
 
 
     """, unsafe_allow_html=True)
+
