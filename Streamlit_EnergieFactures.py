@@ -110,18 +110,24 @@ st.write("***&nbsp;&nbsp; Création de la table de fait FACTURE***")
 
 
 # === PAGE 1 : Introduction ===========================================================================================
+# === PAGE 1 : Introduction ===========================================================================================
 if page == "Introduction":
     st.markdown("""
     <p style='line-height: 1.5;'>
         <strong>Problématique :</strong><br>
-        Les factures des consommations électriques, issues du téléchargement sur les sites extranet des deux fournisseurs d'électricité, n’avaient pas la même structure selon leur fournisseur :<br>
-        - Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres <br>
-        - Noms de colonnes différents<br>
-        - Formats et types de données hétérogènes<br><br>
-        Cette hétérogénéité des données empêchait leur combinaison et leur analyse correcte dans Power BI, 
-        qui requiert des structures uniformes.
+        Les factures des consommations électriques, issues du téléchargement sur les sites extranet des deux fournisseurs d'électricité, n’avaient pas la même structure selon leur fournisseur :
+    </p>
+    <ul style='line-height: 1.5;'>
+        <li>Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres</li>
+        <li>Noms de colonnes différents</li>
+        <li>Formats et types de données hétérogènes</li>
+    </ul>
+    <p style='line-height: 1.5;'>
+        En raison de divergences de structure, il était impossible de fusionner les données des différents fournisseurs dans une table commune. 
+        Cette absence d’uniformité empêchait toute analyse fiable dans Power BI, qui nécessite des structures homogènes pour exploiter les données.
     </p>
     """, unsafe_allow_html=True)
+
 
     
 
@@ -725,5 +731,6 @@ if page == "Conclusion":
 
 
     """, unsafe_allow_html=True)
+
 
 
