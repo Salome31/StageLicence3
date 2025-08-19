@@ -133,31 +133,31 @@ if page == "Introduction":
 
 
 # === ACTIONS MISES EN PLACE ===========================================================================================
-st.markdown("""
-<p style='line-height: 1.5; font-weight:bold; text-transform: uppercase;'>
-    ANALYSE FONCTIONNELLE DES FACTURES ET DU MARCHÉ DE L’ÉNERGIE
-</p>
-<p style='line-height: 1.5;'>
-    Pour répondre aux besoins métiers, j’ai étudié le marché de l’énergie et comparé les structures des factures des deux fournisseurs afin d’identifier les champs utiles et leurs correspondances. Ce travail de compréhension technique, qui m’a pris le plus de temps, était essentiel.
-</p>
-<p style='line-height: 1.5;'>
-    Trois blocs d’information ont été retenus :
-</p>
-<ul style='line-height: 1.5;'>
-    <li>Puissance souscrite</li>
-    <li>Consommation</li>
-    <li>Montants facturés :
-        <ul>
-            <li>Fourniture</li>
-            <li>Acheminement</li>
-            <li>Taxes</li>
-        </ul>
-    </li>
-</ul>
-<p style='line-height: 1.5;'>
-    J’ai ensuite pris contact avec le métier et le prestataire Unixial pour valider les colonnes, vérifier certains calculs, clarifier les éléments ambigus et obtenir les prévisions de consommation 2025 ainsi que les recommandations nécessaires.
-</p>
-""", unsafe_allow_html=True)
+    st.markdown("""
+    <p style='line-height: 1.5; font-weight:bold; text-transform: uppercase;'>
+        ANALYSE FONCTIONNELLE DES FACTURES ET DU MARCHÉ DE L’ÉNERGIE
+    </p>
+    <p style='line-height: 1.5;'>
+        Pour répondre aux besoins métiers, j’ai étudié le marché de l’énergie et comparé les structures des factures des deux fournisseurs afin d’identifier les champs utiles et leurs correspondances. Ce travail de compréhension technique, qui m’a pris le plus de temps, était essentiel.
+    </p>
+    <p style='line-height: 1.5;'>
+        Trois blocs d’information ont été retenus :
+    </p>
+    <ul style='line-height: 1.5;'>
+        <li>Puissance souscrite</li>
+        <li>Consommation</li>
+        <li>Montants facturés :
+            <ul>
+                <li>Fourniture</li>
+                <li>Acheminement</li>
+                <li>Taxes</li>
+            </ul>
+        </li>
+    </ul>
+    <p style='line-height: 1.5;'>
+        J’ai ensuite pris contact avec le métier et le prestataire Unixial pour valider les colonnes, vérifier certains calculs, clarifier les éléments ambigus et obtenir les prévisions de consommation 2025, les montants estimés et les préconisa.
+    </p>
+    """, unsafe_allow_html=True)
 
 # === PAGE 2 : Fichiers bruts ===============================================
 if page == "Fichiers bruts":
@@ -742,6 +742,7 @@ if page == "Conclusion":
 
 
     """, unsafe_allow_html=True)
+
 
 
 
