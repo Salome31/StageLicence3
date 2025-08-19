@@ -78,7 +78,7 @@ image_resized_bytes = resize_image(image, factor)
 # === BARRE LATÉRALE ET LISTE DES PAGES  =========================================================================================
 st.sidebar.title("Salomé Saintin")
 st.sidebar.markdown("**L3 MIASHS parcours-type MIAGE**")
-st.sidebar.markdown("12/05/2025 - 01/09/2025")
+st.sidebar.markdown("Promotion 2025")
 st.sidebar.markdown("---")  # ligne de séparation
 
 st.sidebar.title("Sommaire")
@@ -110,42 +110,13 @@ st.write("***&nbsp;&nbsp; Flux de transformation des factures d'énergie pour cr
 
 
 # === PAGE 1 : Introduction ===========================================================================================
-if page == "Fichiers bruts":
+if page == "Introduction":
     st.markdown("""
     <ul style='line-height: 1.5;'>
-        <li><strong>Problématique</strong> :
-            Les factures des consommations électriques n’avaient pas la même structure selon leur fournisseur (La Belle Énergie ou Volterres) :
-            <ul>
-                <li>Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres</li>
-                <li>Noms de colonnes différents</li>
-                <li>Formats et types de données hétérogènes</li>
-            </ul>
-            Cette hétérogénéité des données empêchait leur combinaison et leur analyse correcte dans Power BI,
-            qui requiert des structures uniformes.
-        </li>
-
-        <li><strong>La source</strong> : 
-            Transformer et fusionner les factures des deux fournisseurs : Volterres et LBE
-        </li>
+        <li><strong>Objectif</strong> : Créer un pipeline Python pour mettre à jour le tableau de bord avec les nouvelles factures</li>
+        <li><strong>La source</strong> : Transformer et fusionner les factures des deux fournisseurs : Volterres et Lbe</li>
     </ul>
     """, unsafe_allow_html=True)
-
-if page == "Introduction":
-st.markdown("""
-<ul style='line-height: 1.5;'>
-    <li><strong>Problématique</strong> : 
-        Les factures des consommations électriques n’avaient pas la même structure selon leur fournisseur (La Belle Énergie ou Volterres) :
-        <ul>
-            <li>Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres</li>
-            <li>Noms de colonnes différents</li>
-            <li>Formats et types de données hétérogènes</li>
-        </ul>
-        Cette hétérogénéité des données empêchait leur combinaison et leur analyse correcte dans Power BI, 
-        qui requiert des structures uniformes.
-    </li>
-</ul>
-""", unsafe_allow_html=True)
-
 
     
 
@@ -751,8 +722,3 @@ if page == "Conclusion":
 
 
     """, unsafe_allow_html=True)
-
-
-
-
-
