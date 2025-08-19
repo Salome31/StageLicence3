@@ -114,15 +114,8 @@ if page == "Introduction":
     st.markdown("""
     <p style='line-height: 1.5;'>
         <strong>Problématique :</strong><br>
-        Les factures des consommations électriques, issues du téléchargement sur les sites extranet des deux fournisseurs d'électricité, n’avaient pas la même structure selon leur fournisseur :
-    </p>
-    <ul style='line-height: 1.5;'>
-        <li>Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres</li>
-        <li>Noms de colonnes différents</li>
-        <li>Formats et types de données hétérogènes</li>
-    </ul>
-    <p style='line-height: 1.5;'>
-        En raison de divergences de structure, il était impossible de fusionner les données des différents fournisseurs dans une table commune. 
+        Les factures des consommations électriques diffèrent en fonction de leur fourisseur LBE ou VOLTERRE
+        En raison de divergences de structure, il était impossible de fusionner les données une table commune. 
         Cette absence d’uniformité empêchait toute analyse fiable dans Power BI, qui nécessite des structures homogènes pour exploiter les données.
     </p>
     """ , unsafe_allow_html=True)
@@ -162,11 +155,17 @@ if page == "Introduction":
 # === PAGE 2 : Fichiers bruts ===============================================
 if page == "Fichiers bruts":
     st.markdown("""
+    <p style='line-height: 1.5; font-weight:bold; text-transform: uppercase;'>
+        TRAVAIL D'UNIFORMISATION DES DONNEES
+    </p>
     <ul style='line-height: 1.5;'>
-        <li><strong>La source</strong> : Deux fichiers Excel des factures originales issues du téléchargement sur les sites extranet des deux fournisseurs d'électricité. </li>
-        <li><strong>La demande</strong> : Créer un flux permettant de charger les factures dans un modèle Power BI. 
-            À l'avenir le flux sera automatisé, mais dans le cadre du stage j'ai réalisé un flux en Python pour transformer les fichiers automatiquement à partir des exports Excel mensuels.</li>
-     <li><strong>A noter</strong> : Pour des raisons de confidentialité les fichiers ont été anonymisés.</li>
+        <strong>La source</strong> : Deux fichiers Excel des factures originales issues du téléchargement sur les sites extranet des deux fournisseurs d'électricité.
+           <ul style='line-height: 1.5;'>
+             <li>Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres</li>
+            <li>Noms de colonnes différents</li>
+            <li>Formats et types de données hétérogènes</li>
+    </ul>
+     <strong>A noter</strong> : Pour des raisons de confidentialité les fichiers ont été anonymisés.
     </ul>
     """, unsafe_allow_html=True)
 
@@ -203,7 +202,7 @@ if page == "Fichiers bruts":
 
         st.write("📏 Dimensions complètes du fichier LBE :", df2.shape)
         st.write("🛠️ Dans le fichier de départ LBE, les entêtes sont sur deux colonnes et les intitulés ne correspondent pas à ceux du fichier Volterres.")
-        st.write("🔁 Il est nécessaire de normaliser la saisie des données pour pouvoir les analyser efficacement.")
+       
 
 
 
@@ -215,21 +214,22 @@ if page == "Transformations réalisées":
         .medium-font { font-size: 18px; }
         </style>
         <h2>Transformations réalisées</h2>
-        <p>Voici un résumé des principales transformations appliquées aux données :</p>
+        <p>Bien que les colonnes pouvaient différer selon le fournisseur,  j’ai appliqué une méthodologie commune : </p>
         <ul>
-            <li>Renommage des colonnes selon un dictionnaire défini</li>
-            <li>Nettoyage des valeurs nulles et suppression des lignes vides</li>
-            <li>Création de colonnes calculées (Total_HTVA, Durée de période de consommation, etc.)</li>
-            <li>Conversion des formats (dates, types numériques)</li>
+            <li>Création d’un dictionnaire de correspondance pour sélectionner et renommer les colonnes à conserver</li>
+            <li>Remplacement des valeurs manquantes ou NaN par des “0” afin de garantir la cohérence des opérations de calcul ultérieures </li>
+            <li>Ajout des colonnes manquantes, soit par insertion de valeurs fixes, soit par calcul (Total_HTVA, Durée de période de consommation, etc.)</li>
+            <li>Uniformisation des formats (dates, numériques, chaînes), indispensable à la concaténation des jeux de données</li>
             <li>Fusion des données des deux fournisseurs</li>
+            <li>Suppression des lignes totalement vides</li>
         </ul>
         """, unsafe_allow_html=True)
 
-    st.markdown('<p class="medium-font"><b>1- Données fournisseur Volterres :</b></p>', unsafe_allow_html=True)
+    st.markdown('<p class="medium-font"><b>1- Données fournisseur VOLTERRES :</b></p>', unsafe_allow_html=True)
 
     # ------------------ VOLTERRES ------------------
     
-    st.markdown('<p class="small-font"><li>Standardisation des noms de colonnes via un dictionnaire</li></p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font"><li>Standardisation et sélection des noms de colonnes via un dictionnaire :</li></p>', unsafe_allow_html=True)
     with st.expander(""):
         st.code("""
     dico_colonnes1 = {
@@ -273,7 +273,7 @@ if page == "Transformations réalisées":
                 """, language="python")
 
     
-    st.markdown('<p class="small-font"><li>Nettoyage des lignes vides</li></p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font"><li>Nettoyage et uniformisation des valeurs manquantes</li></p>', unsafe_allow_html=True)
     with st.expander(""):
             
         st.code("""
@@ -282,7 +282,7 @@ if page == "Transformations réalisées":
     df_renomme1.replace(['nan', 'NaN', 'None'], np.nan, inplace=True)
                 """, language="python")
         
-    st.markdown('<p class="small-font"><li>Création de colonnes calculées et colonnes imposées</li></p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font"><li>Création de nouvelles colonnes et calculs dérivés</li></p>', unsafe_allow_html=True)
     with st.expander(""):
             
         st.code("""
@@ -350,7 +350,7 @@ df_renomme1[[
     df2.columns = [clean_col(col) for col in df2.columns]
                 """, language="python")
                 
-    st.markdown('<p class="small-font"><li>Standardisation des noms de colonnes</li></p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font"><li>Standardisation et sélection des noms de colonnes via un dictionnaire :</li></p>', unsafe_allow_html=True)
     with st.expander(""):
         st.code("""dico_colonnes2 = {
     "PointdelivraisonPDL": "Numero_PDL",
@@ -406,17 +406,12 @@ df_renomme1[[
     'ComposantederegroupementMontant(€)':'Composante_regroupement' ,
     'PointdelivraisonAdresselieudeconsommation':'Adresse_facture' ,
     'PointdelivraisonCodepostallieudeconsommation':'CP_facture',
-    'PointdelivraisonCommunelieudeconsommation':'Ville_facture'} )
-
-             """, language="python")
-             
-    st.markdown('<p class="small-font"><li>Renommage des colonnes</li></p>', unsafe_allow_html=True)
-    with st.expander(""):
-        st.code("""
-    df_renomme2 = df2.rename(columns=dico_colonnes2)[[col for col in dico_colonnes2.values() if col in df2.rename(columns=dico_colonnes2).columns]].copy()
+    'PointdelivraisonCommunelieudeconsommation':'Ville_facture'}
+     df_renomme2 = df2.rename(columns=dico_colonnes2)[[col for col in dico_colonnes2.values() if col in df2.rename(columns=dico_colonnes2).columns]].copy()
                 """, language="python")
 
-    st.markdown('<p class="small-font"><li>Création de nouvelles colonnes</li></p>', unsafe_allow_html=True)
+
+    st.markdown('<p class="small-font"><li>Création de nouvelles colonnes et calculs dérivés</li></p>', unsafe_allow_html=True)
     with st.expander(""):
         st.code("""
     df_renomme2["Total_TVA"] = df_renomme2["TVA_5.5"] + df_renomme2["TVA_20"]
@@ -439,7 +434,7 @@ df_renomme1[[
     ).dt.days
                 """, language="python")
 
-    st.markdown('<p class="small-font"><li>Format et normalisation</li></p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font"><li>Normalisation des formats</li></p>', unsafe_allow_html=True)
     with st.expander(""):
                 st.code("""
 # modification des formats texte en string
@@ -460,7 +455,7 @@ df_renomme2["Date_fin_periode"] = pd.to_datetime(df_renomme2["Date_fin_periode"]
 
     st.markdown('<p class="small-font"><b>3. Fusion des données des deux fournisseurs</b></p>', unsafe_allow_html=True) 
 
-    st.markdown('<p class="small-font"><li>Fusion sur les colonnes communes</li></p>', unsafe_allow_html=True)
+    st.markdown('<p class="small-font"><Fusion sur les colonnes communes</p>', unsafe_allow_html=True)
     with st.expander(""):
         st.markdown('<p class="small-font"><b>Objectif : créer un seul jeu de données uniforme</b></p>', unsafe_allow_html=True)
         st.code("""
@@ -483,7 +478,7 @@ df_renomme2["Date_fin_periode"] = pd.to_datetime(df_renomme2["Date_fin_periode"]
 
 # === PAGE 4 : Fichier Final =======================================================================================
 if page == "Fichier Final":
-    st.subheader("Fichier Final")
+    st.subheader("Fichier Final fusionné")
 
     try:
         # Chargement des données
@@ -502,9 +497,6 @@ if page == "Fichier Final":
 
 
         # 📏 Dimensions (nombre de colonnes uniquement)
-        st.markdown("**📏 Nombre de colonnes par fichier :**")
-        st.markdown(f"- Volterres : **{df1.shape[1]}** colonnes")
-        st.markdown(f"- LBE : **{df2.shape[1]}** colonnes")
         st.markdown(f"- Fichier final Fusionné : **{df_fusionne.shape[1]}** colonnes")
 
         # 📑 Liste des colonnes et types dans un expander
@@ -516,9 +508,9 @@ if page == "Fichier Final":
             st.dataframe(colonnes_types, use_container_width=True)
 
         st.markdown("""
-        <p>Nous avons selectionné 30 colonnes qui nous ont semblé utiles à l'analyse des factures d'électricité.</p> 
-        <p>Certaines colonnes des factures que nous avions conservées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
-        et d'autres devront être ajoutés au modèle pour pouvoir suivre la production d'énergie dans le cadre des projets en cours.</p> 
+        <p>
+        <p>Certaines colonnes des factures que j'ai sélectionnées n'ont pas été utilisées pendant le stage par manque de temps (Heures pleines/heures creuses),
+        et d'autres devront être ajoutés au modèle pour pouvoir suivre l'autoproduction d'énergie dans le cadre des projets en cours.</p> 
     
         """, unsafe_allow_html=True)
 
@@ -541,8 +533,8 @@ if page == "Fichier Final":
         # Affichage dans un tableau Streamlit
         st.dataframe(dates_par_fournisseur, hide_index=True)
 
-        # 🔍 Aperçu du fichier fusionné
-        st.markdown("**🔍 Aperçu du fichier fusionné :**")        
+        # Aperçu du fichier fusionné
+        st.markdown("**Aperçu du fichier fusionné :**")        
         st.markdown(f"Dimensions du fichier : {df_fusionne.shape}")
 
         st.dataframe(df_fusionne.head(30), use_container_width=True, height=200)
@@ -716,32 +708,6 @@ if page == "Statistiques et visualisations":
     df_description.rename(columns={"index": "Colonne"}, inplace=True)
     st.dataframe(df_description, use_container_width=True)
 
-
-# === PAGE 6 : Conclusion =======================================================================================
-if page == "Conclusion":
-    
-    st.markdown("""
-    <h4><strong>Conclusions</strong></h4>
-    <p>Le script réalisé avec python en début de stage a permis bien comprendre le contexte du marché d'électricité et la structure des factures des deux fournisseurs.</p> 
-    <p>Il a été utilisé plusieurs fois au cours du stage afin d'intégrer les nouvelles factures au modèle Power BI.</p>
-    <p>Le fichier transformé a été croisé avec d'autres données (Données de références des PDL, informations sur les marchés, données ENEDIS) pour permettre un suivi des factures et du marché.</p> 
-    <p>J'ai eu l'occasion de présenter le rapport Power BI réalisé au Directeur Général des Services ainsi qu'à la responsable des marchés publics au cours d'une réunion organisée à la fin de mon stage.</p> 
-
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-    <h4><strong>Perspectives</strong></h4>
-
-    <p>Le travail réalisé au cours de mon stage (script Pyhton et rapport Power BI) sera complété et enrichi par l'entreprise et les flux seront automatisés.</p> 
-    
-    <p>Ce travail préliminaire permettra à terme à l'entreprise de mieux maîtriser ses dépenses d'électricité et d'optimiser ses contrats 
-    en s'assurant de l'adéquation des besoins de chaque PDL au type de contrat.</p> 
-    
-    <p>Cela m'a permis de travailler sur des données liées à l'énergie et d'utiliser différents outils (notebook Jupyter, VS Code, Excel, Power BI). 
-    J'ai également pu m'imprégner du fonctionnement de l'entreprise et mieux comprendre les attentes des métiers vis à vis de la DSI et de l'équipe Data.</p> 
-
-
-    """, unsafe_allow_html=True)
 
 
 
