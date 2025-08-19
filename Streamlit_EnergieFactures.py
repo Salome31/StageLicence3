@@ -114,8 +114,8 @@ if page == "Introduction":
     st.markdown("""
     <p style='line-height: 1.5;'>
         <strong>Problématique :</strong><br>
-        Les factures des consommations électriques n’avaient pas la même structure selon leur fournisseur (La Belle Énergie ou Volterres) :<br>
-        - Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres<br>
+        Les factures des consommations électriques, issues du téléchargement sur les sites extranet des deux fournisseurs d'électricité, n’avaient pas la même structure selon leur fournisseur :<br>
+        - Nombre de colonnes distinct : 158 pour LBE et 124 pour Volterres <br>
         - Noms de colonnes différents<br>
         - Formats et types de données hétérogènes<br><br>
         Cette hétérogénéité des données empêchait leur combinaison et leur analyse correcte dans Power BI, 
@@ -130,13 +130,11 @@ if page == "Introduction":
 
 
     st.markdown("""
-    <h4 style='line-height: 1.2;'>Importance de la qualité des données</h4>
     <ul style='line-height: 1.5;'>
-        <li><strong>La démarche : </strong>
-            <ul style='line-height: 1.5;'>
-                <li> Récupérer les données sources</li>
-                <li> Corriger les sources de données qui ne sont pas toujours de bonne qualité</li>
-                <li> Harmoniser les colonnes pour pouvoir fusionner les deux fichiers</li>
+        <li><strong>Actions mises en place : </strong>
+            <ul style='line-height: 1.5;'> Pour rendre ces données exploitables, deux étapes ont été nécessaires 
+                <li> Une analyse fonctionnelle des factures et des marchés de l’énergie</li>
+                <li> Un travail d’uniformisation technique via un script Python</li>
             </ul>
         </li>
     </ul>
@@ -727,4 +725,5 @@ if page == "Conclusion":
 
 
     """, unsafe_allow_html=True)
+
 
