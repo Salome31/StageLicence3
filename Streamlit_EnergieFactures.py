@@ -82,7 +82,7 @@ st.sidebar.markdown("Promotion 2025")
 st.sidebar.markdown("---")  # ligne de séparation
 
 st.sidebar.title("Sommaire")
-pages = ["Introduction", "Fichiers bruts", "Transformations réalisées", "Fichier Final", "Statistiques et visualisations", "Conclusion"]
+pages = ["Introduction", "Fichiers bruts", "Transformations réalisées", "Fichier Final", "Statistiques et visualisations"]
 page = st.sidebar.radio("Aller vers", pages)
 
 
@@ -707,6 +707,7 @@ if page == "Statistiques et visualisations":
     df_description = df_fusionne[["Tarif_acheminement"]].describe().transpose().reset_index()
     df_description.rename(columns={"index": "Colonne"}, inplace=True)
     st.dataframe(df_description, use_container_width=True)
+
 
 
 
